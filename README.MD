@@ -2,6 +2,7 @@
 
 **dithe** is a lightweight JavaScript library for applying dithering effects to images. It supports various dithering algorithms (e.g., Floyd-Steinberg, Atkinson, Bayer) and allows users to apply custom or predefined color palettes (e.g., Game Boy, grayscale, sepia). The library is modular, making it easy to extend or customize.
 
+[img src="https://i.imghippo.com/files/Gzm9505dQ.png"]
 ---
 
 ## **Features**
