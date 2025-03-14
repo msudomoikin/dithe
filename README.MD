@@ -159,4 +159,4 @@ We welcome contributions! If you'd like to contribute to this project, please fo
 
 For questions, suggestions, or issues, feel free to reach out:
 
-- GitHub: [Your GitHub Profile](https://github.com/msudomoikin)
+- GitHub: [https://github.com/msudomoikin](https://github.com/msudomoikin)
