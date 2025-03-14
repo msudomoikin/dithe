@@ -25,4 +25,8 @@ export const PALETTES = {
     [214, 134, 40], // Light sepia
     [255, 255, 120], // White
   ],
+  binary: [
+    [0, 0, 0], // Black
+    [255, 255, 255], // White
+  ],
 };

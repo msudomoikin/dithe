@@ -1,7 +1,3 @@
-Below is a professional and well-structured `README.md` file for your `DitherJS` library. It follows best practices for documenting open-source projects, including clear descriptions, usage examples, and options for each algorithm.
-
----
-
 # **DitherJS**
 
 **DitherJS** is a lightweight JavaScript library for applying dithering effects to images. It supports various dithering algorithms (e.g., Floyd-Steinberg, Atkinson, Bayer) and allows users to apply custom or predefined color palettes (e.g., Game Boy, grayscale, sepia). The library is modular, making it easy to extend or customize.
