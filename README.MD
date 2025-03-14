@@ -159,7 +159,6 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 ## **Acknowledgments**
 
 - Inspired by the article ["Ditherpunk"](https://surma.dev/things/ditherpunk/) by Surma.
-- Special thanks to the open-source community for their support and feedback.
 
 ---
 
@@ -169,7 +168,3 @@ For questions, suggestions, or issues, feel free to reach out:
 
 - GitHub: [Your GitHub Profile](https://github.com/yourusername)
 - Email: your.email@example.com
-
----
-
-This `README.md` provides a comprehensive overview of your library, making it easy for users to understand its purpose, features, and usage. It also adheres to best practices for open-source project documentation.
