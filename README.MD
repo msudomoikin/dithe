@@ -19,7 +19,7 @@
 ### **From Source**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ditherjs.git
+   git clone https://github.com/msudomoikin/ditherjs.git
    ```
 2. Include the library in your project:
    ```html
@@ -29,14 +29,6 @@
 ### **Using npm (Coming Soon)**
 
 ---
-
-## **Usage**
-
-- **`applyDithering(img, options)`**
-  - **Parameters**:
-    - `img` (`HTMLImageElement`): The input image element.
-    - `options` (`Object`): Configuration options for the dithering process.
-  - **Returns**: An `HTMLCanvasElement` containing the dithered image.
 
 ### **Basic Example**
 
@@ -57,7 +49,11 @@ img.onload = () => {
   document.body.appendChild(ditheredCanvas);
 };
 ```
-
+- **`applyDithering(img, options)`**
+  - **Parameters**:
+    - `img` (`HTMLImageElement`): The input image element.
+    - `options` (`Object`): Configuration options for the dithering process.
+  - **Returns**: An `HTMLCanvasElement` containing the dithered image.
 ---
 
 ## **Options**
@@ -152,12 +148,6 @@ We welcome contributions! If you'd like to contribute to this project, please fo
 
 ---
 
-## **License**
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
 ## **Acknowledgments**
 
 - Inspired by the article ["Ditherpunk"](https://surma.dev/things/ditherpunk/) by Surma.
@@ -168,5 +158,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 For questions, suggestions, or issues, feel free to reach out:
 
-- GitHub: [Your GitHub Profile](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [Your GitHub Profile](https://github.com/msudomoikin)
