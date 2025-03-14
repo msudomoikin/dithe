@@ -1,0 +1,175 @@
+Below is a professional and well-structured `README.md` file for your `DitherJS` library. It follows best practices for documenting open-source projects, including clear descriptions, usage examples, and options for each algorithm.
+
+---
+
+# **DitherJS**
+
+**DitherJS** is a lightweight JavaScript library for applying dithering effects to images. It supports various dithering algorithms (e.g., Floyd-Steinberg, Atkinson, Bayer) and allows users to apply custom or predefined color palettes (e.g., Game Boy, grayscale, sepia). The library is modular, making it easy to extend or customize.
+
+---
+
+## **Features**
+
+- **Multiple Algorithms**: Supports popular dithering algorithms like Floyd-Steinberg, Atkinson, and Bayer.
+- **Predefined Palettes**: Includes palettes such as Game Boy, grayscale, and sepia.
+- **Customizable**: Users can define their own color palettes.
+- **Modular Design**: Each algorithm is implemented in its own module for better maintainability and scalability.
+- **Easy Integration**: Works seamlessly with HTML `<img>` elements and outputs a dithered image on an HTML `<canvas>`.
+
+---
+
+## **Installation**
+
+### **From Source**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/ditherjs.git
+   ```
+2. Include the library in your project:
+   ```html
+   <script type="module" src="path/to/DitherJS.js"></script>
+   ```
+
+### **Using npm (Coming Soon)**
+```bash
+npm install ditherjs
+```
+
+---
+
+## **Usage**
+
+### **Basic Example**
+
+```javascript
+import { DitherJS } from "./DitherJS.js";
+
+const dither = new DitherJS();
+
+const img = new Image();
+img.src = "path/to/your/image.jpg";
+img.onload = () => {
+  const options = {
+    algorithm: "floydSteinberg", // or "atkinson", "bayer"
+    palette: "gameboy", // or "sepia", "grayscale", or custom palette
+  };
+
+  const ditheredCanvas = dither.applyDithering(img, options);
+  document.body.appendChild(ditheredCanvas);
+};
+```
+
+---
+
+## **Options**
+
+The `applyDithering` method accepts an `options` object with the following properties:
+
+| Option       | Type             | Description                                                                                   | Default Value |
+|--------------|------------------|-----------------------------------------------------------------------------------------------|---------------|
+| `algorithm`  | `"floydSteinberg"`, `"atkinson"`, `"bayer"` | The dithering algorithm to use.                                                               | `"floydSteinberg"` |
+| `palette`    | `string` or `Array` | The color palette to use. Can be a predefined palette name (`"grayscale"`, `"gameboy"`, etc.) or a custom array of RGB colors. | `"grayscale"` |
+
+---
+
+### **Available Algorithms**
+
+#### **1. Floyd-Steinberg**
+- **Description**: A popular error-diffusion dithering algorithm that distributes quantization errors to neighboring pixels.
+- **Best For**: General-purpose dithering with smooth gradients.
+- **Options**:
+  - `palette`: Any valid palette (predefined or custom).
+
+#### **2. Atkinson**
+- **Description**: Similar to Floyd-Steinberg but diffuses the error over more pixels, resulting in softer edges.
+- **Best For**: Images where softer transitions are desired.
+- **Options**:
+  - `palette`: Any valid palette (predefined or custom).
+
+#### **3. Bayer**
+- **Description**: A simple ordered dithering algorithm that uses a Bayer matrix to determine pixel thresholds.
+- **Best For**: Pixel art or low-color environments.
+- **Options**:
+  - `palette`: Any valid palette (predefined or custom).
+
+---
+
+### **Available Palettes**
+
+| Palette Name   | Description                                                                                     | Example Colors (RGB)                          |
+|----------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| `"grayscale"`  | A simple black, gray, and white palette.                                                        | `[0, 0, 0]`, `[128, 128, 128]`, `[255, 255, 255]` |
+| `"gameboy"`    | Mimics the classic Game Boy color scheme.                                                       | `[15, 56, 15]`, `[48, 98, 48]`, `[139, 172, 15]`, `[155, 188, 15]` |
+| `"sepia"`      | A warm, vintage-style palette.                                                                  | `[0, 0, 0]`, `[112, 66, 20]`, `[168, 100, 30]`, `[255, 255, 255]` |
+
+---
+
+### **Custom Palettes**
+
+You can define your own palette by passing an array of RGB arrays. For example:
+
+```javascript
+const customPalette = [
+  [255, 0, 0], // Red
+  [0, 255, 0], // Green
+  [0, 0, 255], // Blue
+];
+
+const options = {
+  algorithm: "floydSteinberg",
+  palette: customPalette,
+};
+
+const ditheredCanvas = dither.applyDithering(img, options);
+document.body.appendChild(ditheredCanvas);
+```
+
+---
+
+## **API Reference**
+
+### **Class: `DitherJS`**
+
+#### **Methods**
+
+- **`applyDithering(img, options)`**
+  - **Parameters**:
+    - `img` (`HTMLImageElement`): The input image element.
+    - `options` (`Object`): Configuration options for the dithering process.
+  - **Returns**: An `HTMLCanvasElement` containing the dithered image.
+
+---
+
+## **Contributing**
+
+We welcome contributions! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Submit a pull request with a detailed description of your changes.
+
+---
+
+## **License**
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## **Acknowledgments**
+
+- Inspired by the article ["Ditherpunk"](https://surma.dev/things/ditherpunk/) by Surma.
+- Special thanks to the open-source community for their support and feedback.
+
+---
+
+## **Contact**
+
+For questions, suggestions, or issues, feel free to reach out:
+
+- GitHub: [Your GitHub Profile](https://github.com/yourusername)
+- Email: your.email@example.com
+
+---
+
+This `README.md` provides a comprehensive overview of your library, making it easy for users to understand its purpose, features, and usage. It also adheres to best practices for open-source project documentation.
