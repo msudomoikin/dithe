@@ -1,11 +1,12 @@
-import { DitherJS } from "../DitherJS/DitherJS.js";
+import { Dithe } from "../Dithe/Dithe.js";
 
-const dither = new DitherJS();
+const dither = new Dithe();
 const params = document.createElement("div");
 params.classList.add("params-note");
 
 const img = new Image();
 img.src = "./images/shop.jpg";
+
 img.onload = () => {
   const options = {
     algorithm: "bayer",
@@ -22,8 +23,10 @@ img.onload = () => {
     },
     scale: .65,
   };
+
   const ditheredCanvas = dither.applyDithering(img, options);
   params.textContent = JSON.stringify(options);
+  
   document.body.appendChild(params);
   document.body.appendChild(ditheredCanvas);
 };

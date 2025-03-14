@@ -4,7 +4,7 @@ import { atkinson } from "./algorithms/atkinson.js";
 import { bayer } from "./algorithms/bayer.js";
 import { PALETTES } from "./palettes.js";
 
-export class DitherJS {
+export class Dithe {
   constructor() {
     this.palettes = PALETTES;
 
