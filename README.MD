@@ -138,6 +138,23 @@ document.body.appendChild(ditheredCanvas);
     - `options` (`Object`): Configuration options for the dithering process.
   - **Returns**: An `HTMLCanvasElement` containing the dithered image.
 
+#### **Algorithm-Specific Options**
+
+You can pass additional configuration options for each algorithm using the `algorithmOptions` property.
+
+- **Floyd-Steinberg**:
+  - `rightFactor`: Error diffusion factor for the pixel to the right (default: `7/16`).
+  - `bottomLeftFactor`: Error diffusion factor for the pixel to the bottom-left (default: `3/16`).
+  - `bottomFactor`: Error diffusion factor for the pixel directly below (default: `5/16`).
+  - `bottomRightFactor`: Error diffusion factor for the pixel to the bottom-right (default: `1/16`).
+
+- **Atkinson**:
+  - `factor`: Global error diffusion factor (default: `1/8`).
+
+- **Bayer**:
+  - `thresholdScale`: Scales the threshold values in the Bayer matrix (default: `1`).
+
+
 ---
 
 ## **Contributing**

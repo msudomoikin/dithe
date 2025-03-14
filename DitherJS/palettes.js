@@ -1,4 +1,4 @@
-export const PALLETES = {
+export const PALETTES = {
   grayscale: [
     [0, 0, 0], // Black
     [128, 128, 128], // Gray

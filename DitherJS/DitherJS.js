@@ -2,11 +2,12 @@
 import { floydSteinberg } from "./algorithms/floydSteinberg.js";
 import { atkinson } from "./algorithms/atkinson.js";
 import { bayer } from "./algorithms/bayer.js";
-import { PALLETES } from "./palettes.js";
+import { PALETTES } from "./palettes.js";
 
 export class DitherJS {
   constructor() {
-    this.palettes = PALLETES;
+    this.palettes = PALETTES;
+
     this.defaultPalette = "grayscale";
     this.defaultAlgorithm = "floydSteinberg";
   }
@@ -17,6 +18,7 @@ export class DitherJS {
    * @param {Object} options - Configuration options.
    * @param {string} options.algorithm - Dithering algorithm to use.
    * @param {string|Array} options.palette - Color palette to use.
+   * @param {Object} options.algorithmOptions - Algorithm-specific options.
    * @returns {HTMLCanvasElement} - Canvas with the dithered image.
    */
   applyDithering(img, options = {}) {
@@ -39,15 +41,38 @@ export class DitherJS {
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const pixels = imageData.data;
 
+    const scale = options.scale ?? 1; // Default scale is 1
+
     switch (algorithm) {
       case "floydSteinberg":
-        floydSteinberg(pixels, canvas.width, canvas.height, palette);
+        floydSteinberg(
+          pixels,
+          canvas.width,
+          canvas.height,
+          palette,
+          scale,
+          options.algorithmOptions
+        );
         break;
       case "atkinson":
-        atkinson(pixels, canvas.width, canvas.height, palette);
+        atkinson(
+          pixels,
+          canvas.width,
+          canvas.height,
+          palette,
+          scale,
+          options.algorithmOptions
+        );
         break;
       case "bayer":
-        bayer(pixels, canvas.width, canvas.height, palette);
+        bayer(
+          pixels,
+          canvas.width,
+          canvas.height,
+          palette,
+          scale,
+          options.algorithmOptions
+        );
         break;
       default:
         throw new Error("Unsupported dithering algorithm.");

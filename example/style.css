@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;D
+}
+
+.params-note {
+position: absolute;
+color: #fff;
+top: 20px;
+left: 20px;
+
+}
