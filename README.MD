@@ -1,6 +1,6 @@
-# **DitherJS**
+# **dithe**
 
-**DitherJS** is a lightweight JavaScript library for applying dithering effects to images. It supports various dithering algorithms (e.g., Floyd-Steinberg, Atkinson, Bayer) and allows users to apply custom or predefined color palettes (e.g., Game Boy, grayscale, sepia). The library is modular, making it easy to extend or customize.
+**dithe** is a lightweight JavaScript library for applying dithering effects to images. It supports various dithering algorithms (e.g., Floyd-Steinberg, Atkinson, Bayer) and allows users to apply custom or predefined color palettes (e.g., Game Boy, grayscale, sepia). The library is modular, making it easy to extend or customize.
 
 ---
 
@@ -19,29 +19,21 @@
 ### **From Source**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ditherjs.git
+   git clone https://github.com/msudomoikin/dithe.git
    ```
 2. Include the library in your project:
    ```html
-   <script type="module" src="path/to/DitherJS.js"></script>
+   <script type="module" src="path/to/dithe.js"></script>
    ```
 
 ### **Using npm (Coming Soon)**
 
 ---
 
-## **Usage**
-
-- **`applyDithering(img, options)`**
-  - **Parameters**:
-    - `img` (`HTMLImageElement`): The input image element.
-    - `options` (`Object`): Configuration options for the dithering process.
-  - **Returns**: An `HTMLCanvasElement` containing the dithered image.
-
 ### **Basic Example**
 
 ```javascript
-import { DitherJS } from "./DitherJS.js";
+import { Dithe } from "./dithe.js";
 
 const dither = new DitherJS();
 
@@ -57,7 +49,11 @@ img.onload = () => {
   document.body.appendChild(ditheredCanvas);
 };
 ```
-
+- **`applyDithering(img, options)`**
+  - **Parameters**:
+    - `img` (`HTMLImageElement`): The input image element.
+    - `options` (`Object`): Configuration options for the dithering process.
+  - **Returns**: An `HTMLCanvasElement` containing the dithered image.
 ---
 
 ## **Options**
@@ -152,15 +148,10 @@ We welcome contributions! If you'd like to contribute to this project, please fo
 
 ---
 
-## **License**
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
 ## **Acknowledgments**
 
 - Inspired by the article ["Ditherpunk"](https://surma.dev/things/ditherpunk/) by Surma.
+- Code was written with https://chat.qwen.ai/, prompted and corrected by me
 
 ---
 
@@ -168,5 +159,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 For questions, suggestions, or issues, feel free to reach out:
 
-- GitHub: [Your GitHub Profile](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [Your GitHub Profile](https://github.com/msudomoikin)
